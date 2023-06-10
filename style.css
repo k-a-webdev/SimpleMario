@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: url('img/main_bg.jpg');
+    overflow-x: hidden;
+}
+
+.game {
+    width: 80vw;
+    height: 30vh;
+    margin: 0 auto;
+    position: relative;
+    top: calc(70vh - 100px);
+    box-sizing: content-box;
+    z-index: 100;
+}
+
+/* .bush {
+    width: calc((100vw - 600px) / 2);
+    height: 130px;
+    position: absolute;
+    top: calc(70vh - -20px);
+} */
+
+.game > img {
+    position: absolute;
+    bottom: -2px;
+    height: 100px;
+    z-index: 2
+}
+.game > img:first-child {  
+    left: -220px;
+}
+.game > img:last-child {
+    right: -200px;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #9400b1;
+    margin-left: 10px;
+}
+.timer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #9400b1;
+    margin-right: 10px;
+}
+
+.player {
+    width: 50px;
+    height: 50px;
+    background-image: url('./img/player.png');
+    background-size: 50px 50px;
+    position: relative;
+    top: calc(100% - 50px);
+    z-index: 3;
+}
+
+.damper {
+    width: 40px;
+    height: 40px;
+    background-image: url('./img/damper.png');
+    background-size: 40px 40px;
+    position: relative;
+    top: calc(100% - 40px - 50px);
+    left: calc(100% - 40px);
+    z-index: 1;
+}
+
+.start {
+    width: 60vw;
+    height: 40px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #9400b1;
+    border: 2px solid #9400b1;
+    font-size: 1.4em;
+    background: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.start_bg {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: '';
+    height: 40px;
+    width: 0;
+    background: #9400b1;
+    transition: 0.5s;
+    z-index: -1;
+}
+.start:hover {
+    color: #fff;
+}
+.start:hover .start_bg {
+    width: 100%;
+}
+
+.animate {
+    animation: damperMove 2s infinite linear;
+}
+
+.active {
+    animation: jumpActive 0.3s linear;
+}
+
+@media (max-width: 560px) {
+    .animate {
+        animation: damperMove 1s infinite linear;
+    }
+}
+@media (max-width: 720px) {
+    .animate {
+        animation: damperMove 1.5s infinite linear;
+    }
+}
+
+@keyframes damperMove {
+    0% {
+        left: calc(100% - 40px);
+    }
+
+    100% {
+        left: -40px;
+    }
+}
+
+@keyframes jumpActive {
+    0% {
+        top: 150px;
+    }
+
+    20% {
+        top: 100px;
+    }
+
+    50% {
+        top: 50px;
+    }
+
+    80% {
+        top: 100px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
