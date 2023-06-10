@@ -1,4 +1,4 @@
-# Nike landing
+# Simple Mario Game
 For this project I used:\
 * __HTML__
 * __CSS__
