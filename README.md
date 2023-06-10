@@ -5,6 +5,6 @@ For this project I used:\
 * __JS__
 \
 \
-This site is responsive and with processing of DOM elements. \
+This site work with processing of DOM elements and correctly work only on PC. \
 [Link on this website](https://k-a-webdev.github.io/SimpleMario/)
 ![Preview photo](img/Preview.png)
