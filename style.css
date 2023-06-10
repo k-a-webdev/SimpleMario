@@ -22,13 +22,6 @@ html {
     transform: translateX(-50%);
 }
 
-/* .bush {
-    width: calc((100vw - 600px) / 2);
-    height: 130px;
-    position: absolute;
-    top: calc(70vh - -20px);
-} */
-
 .game > img {
     position: absolute;
     bottom: -2px;
