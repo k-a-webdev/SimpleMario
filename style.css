@@ -122,6 +122,10 @@ html {
     .animate {
         animation: damperMove 1s infinite linear;
     }
+
+    .active {
+        animation: jumpActive 0.5s linear;
+    }
 }
 @media (max-width: 720px) {
     .animate {
