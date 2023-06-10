@@ -13,10 +13,12 @@ html {
     width: 80vw;
     height: 30vh;
     margin: 0 auto;
-    position: relative;
-    top: calc(70vh - 100px);
+    position: absolute;
+    bottom: 100px;
     box-sizing: content-box;
     z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* .bush {
@@ -91,6 +93,7 @@ html {
     background: none;
     cursor: pointer;
     transition: all 0.5s;
+    top: 20vh;
 }
 .start_bg {
     position: absolute;
